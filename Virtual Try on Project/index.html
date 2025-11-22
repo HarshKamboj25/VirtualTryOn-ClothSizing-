@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloth Measuring Prototype</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="topbar">
+        <h1>Smart Cloth Sizing</h1>
+    </header>
+
+    <main class="container">
+        <section class="camera-box">
+            <video id="video" autoplay playsinline></video>
+            <canvas id="overlay"></canvas>
+
+            <div class="btn-group">
+                <button id="captureBtn">Capture</button>
+                <button id="measureBtn">Measure Size</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+
+            <p id="status" class="status">Status: Waiting...</p>
+        </section>
+
+        <section class="results-box">
+            <h2>Measurements</h2>
+            <p>Chest: <span id="chest">—</span></p>
+            <p>Shoulder: <span id="shoulder">—</span></p>
+            <p>Arm Length: <span id="arm">—</span></p>
+            <p>Waist: <span id="waist">—</span></p>
+
+            <h2>Suggested Items</h2>
+            <div id="suggestions" class="suggestion-list"></div>
+        </section>
+    </main>
+
+    <!-- Load app as module so dynamic imports (MediaPipe) work -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+
+<script src="app.js"></script>
+
+    
+</body>
+</html>

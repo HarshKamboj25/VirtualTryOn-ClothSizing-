@@ -1,0 +1,188 @@
+/* =====================================================
+   DARK MODE UI (Option D)
+   Premium Black + Neon Blue Theme
+   Responsive + Animated
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, Arial;
+}
+
+body {
+    background: #0b0b0d;
+    color: #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =============================
+   TOP BAR
+============================= */
+.topbar {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: #111218;
+    color: #4cc9f0;
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.6);
+}
+
+/* =============================
+   GRID LAYOUT
+============================= */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    padding: 0 20px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =============================
+   CAMERA SECTION
+============================= */
+.camera-box {
+    background: #15161d;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    animation: fadeIn 0.6s ease;
+}
+
+.camera-box video,
+.camera-box canvas {
+    width: 100%;
+    border-radius: 12px;
+    background: #000;
+    box-shadow: 0 0 15px rgba(76, 201, 240, 0.3);
+    animation: fadeIn 1s ease;
+}
+
+/* =============================
+   BUTTONS
+============================= */
+.btn-group {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    background: linear-gradient(135deg, #3a0ca3, #4cc9f0);
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+    box-shadow: 0 0 10px rgba(76, 201, 240, 0.4);
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 0 18px rgba(76, 201, 240, 0.8);
+}
+
+/* =============================
+   STATUS BAR
+============================= */
+.status {
+    margin-top: 15px;
+    background: #0f1117;
+    padding: 12px;
+    border-radius: 10px;
+    border-left: 4px solid #4cc9f0;
+    font-size: 14px;
+    color: #c7dfff;
+    box-shadow: 0 0 12px rgba(76, 201, 240, 0.3);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* =============================
+   RESULTS PANEL
+============================= */
+.results-box {
+    background: #15161d;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    animation: fadeIn 0.8s ease;
+}
+
+.results-box h2 {
+    margin-bottom: 12px;
+    color: #4cc9f0;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #22232b;
+    padding-bottom: 6px;
+}
+
+.results-box p {
+    margin: 8px 0;
+    font-size: 1.1rem;
+    color: #d0d0d0;
+}
+
+/* =============================
+   SUGGESTIONS
+============================= */
+.suggestion-list {
+    margin-top: 12px;
+    background: #0f1117;
+    padding: 14px;
+    border-radius: 12px;
+    min-height: 100px;
+    box-shadow: 0 0 12px rgba(76, 201, 240, 0.2);
+}
+
+.suggestion-item {
+    padding: 10px;
+    background: #1b1d26;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: #dff6ff;
+    font-size: 14px;
+    animation: slideIn 0.6s ease;
+    border-left: 3px solid #4cc9f0;
+}
+
+.suggestion-item:hover {
+    transform: translateX(6px);
+    transition: 0.3s ease;
+}
+
+/* =============================
+   KEYFRAME ANIMATIONS
+============================= */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 rgba(76, 201, 240, 0.2); }
+    50% { box-shadow: 0 0 15px rgba(76, 201, 240, 0.5); }
+    100% { box-shadow: 0 0 0 rgba(76, 201, 240, 0.2); }
+}
